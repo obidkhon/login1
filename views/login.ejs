@@ -2,10 +2,12 @@
 
 
 <h1>Login </h1>
+<% if (messages.error) { %>
+    <%= messages.error %>
+  <% } %>
+
 <form action="/login" method="POST">
-    <% if(message.error) {%>
-<% message error %>
-<%}%>
+   
 
 <div>
     <label for="email"> Email:</label>
@@ -15,7 +17,7 @@
 
 <div>
     <label for="password">Password:</label>
-    <input type="text" id="password "name="password" placeholder="Passvord"
+    <input type="password" id="password "name="password" placeholder="Passvord"
     required>
 </div>
 <button type="submit"> Login</button>
